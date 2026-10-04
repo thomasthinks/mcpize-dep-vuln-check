@@ -1,0 +1,1 @@
+{"plans":[{"name":"Free","overage":null,"price_monthly_usd":0,"quota":"100 checks/day"},{"name":"Pro","overage":null,"price_monthly_usd":12,"quota":"unlimited"}],"x402":{"applies_to":["check_package","check_sbom"],"enabled":true,"price_usdc_per_call":0.02}}

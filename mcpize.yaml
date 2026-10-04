@@ -1,0 +1,29 @@
+version: 1
+name: dep-vuln-check
+description: Package vulnerability lookup via OSV.dev — check single packages or scan SBOMs for known CVEs
+runtime: typescript
+entry: src/index.ts
+
+build:
+  install: npm ci
+  command: npm run build
+
+startCommand:
+  type: http
+  command: node dist/index.js
+
+configSchema:
+  source: code
+
+pricing:
+  protocol: x402
+  network: base-sepolia  # test first, flip to 'base' for production
+  recipient: "0x62c6da49028953919a4bd35d3092ac9277DA0a7D"
+  asset: usdc
+  tools:
+    - name: check_package
+      price: "0.02"
+      description: "Check whether a specific package version has known vulnerabilities, using the OSV.dev database (free, no API key). Returns each vulnerabilit…"
+    - name: check_sbom
+      price: "0.02"
+      description: "Scan a software bill of materials (list of up to 50 packages with ecosystem, name, and version) for known vulnerabilities via OSV.dev. Retur…"
