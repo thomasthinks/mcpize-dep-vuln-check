@@ -23,7 +23,5 @@ pricing:
   tools:
     - name: check_package
       price: "0.02"
-      description: "Check whether a specific package version has known vulnerabilities, using the OSV.dev database (free, no API key). Returns each vulnerabilit…"
     - name: check_sbom
       price: "0.02"
-      description: "Scan a software bill of materials (list of up to 50 packages with ecosystem, name, and version) for known vulnerabilities via OSV.dev. Retur…"
